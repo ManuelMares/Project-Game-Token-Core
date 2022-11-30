@@ -24,14 +24,12 @@ namespace Grid_game
             token(in_token), 
             token_viz(shape())
             {
-
                 play_state = new Graph_lib::Text{Graph_lib::Point{0+status_band_padding,status_band_baseline},"INIT"};
                 
                 hp_state = new Graph_lib::Text{Graph_lib::Point{(w/4)+status_band_padding,status_band_baseline},"HP: "+to_string(token.hit_points())+"/"+to_string(token.max_hit_points())};
                 
                 pp_state = new Graph_lib::Text{Graph_lib::Point{2*(w/4)+status_band_padding,status_band_baseline},"PP: "+to_string(token.power_points())+"/"+to_string(token.max_power_points())}; 
 
-                cout << "MAXXXXXXXX: " << state.max_turns() << "\n";
                 turn_state = new Graph_lib::Text{Graph_lib::Point{3*(w/4)+status_band_padding, status_band_baseline}, "Turn: "+to_string(state.turn())+"/"+to_string(state.max_turns())};
             }
 

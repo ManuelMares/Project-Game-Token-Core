@@ -49,11 +49,6 @@ namespace Grid_game
          */
         Board(int w, int h, int start_x) : Board(w, h, time(NULL), start_x) {}
 
-        
-        // Board(int w, int h, int start_x) {
-        //      Board(w, h, time(NULL), start_x);
-        // }
-
         // use a file to specify the board
         Board(string filename);
 

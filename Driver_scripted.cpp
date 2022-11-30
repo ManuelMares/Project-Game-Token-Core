@@ -8,23 +8,23 @@ namespace Grid_game
 
         if (script_source >> next_command)
         {
-            //cout << "next command: " << next_command << endl;
+            cout << "next command: " << next_command << endl;
             switch (next_command)
             {
             case CMD_UP:
-                //cout << "going: " << next_command << endl;
+                cout << "going: " << next_command << endl;
                 token.step_normal(direction::up);
                 break;
             case CMD_RIGHT:
-                //cout << "going: " << next_command << endl;
+                cout << "going: " << next_command << endl;
                 token.step_normal(direction::right);
                 break;
             case CMD_DOWN:
-                //cout << "going: " << next_command << endl;
+                cout << "going: " << next_command << endl;
                 token.step_normal(direction::down);
                 break;
             case CMD_LEFT:
-                //cout << "going: " << next_command << endl;
+                cout << "going: " << next_command << endl;
                 token.step_normal(direction::left);
                 break;
             case CMD_SPC_UP:

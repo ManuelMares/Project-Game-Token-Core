@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Lava Doom v01",
+      "setup": "make clean game_loop_headless",
+      "run": "./game_loop_headless default.set danger.map cmd_danger_late_lava.cmd",
+      "input": "",
+      "output": " --- Game Status ---\r\n  hp: 3 / 3\r\n  pp: 3 / 3\r\nturn: 20 / 35\r\nnext command: d\r\ngoing: d\r\n --- Game Status ---\r\n  hp: 3 / 3\r\n  pp: 3 / 3\r\nturn: 21 / 35\r\nnext command: d\r\ngoing: d\r\nGAME OVER - hit points gone\r\n",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 10
+    },
+    {
+      "name": "Swimming v01",
+      "setup": "make clean game_loop_headless",
+      "run": "./game_loop_headless default.set danger.map cmd_danger_swim.cmd",
+      "input": "",
+      "output": " --- Game Status ---\r\n  hp: 1 / 3\r\n  pp: 3 / 3\r\nturn: 16 / 35\r\nnext command: l\r\ngoing: l\r\n --- Game Status ---\r\n  hp: 1 / 3\r\n  pp: 3 / 3\r\nturn: 17 / 35\r\nnext command: l\r\ngoing: l\r\n --- Game Status ---\r\n  hp: 1 / 3\r\n  pp: 3 / 3\r\nturn: 18 / 35\r\nnext command: d\r\ngoing: d\r\nGAME OVER - hit points gone\r\n",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 10
+    },
+    {
+      "name": "Running Up the Clock v01",
+      "setup": "make clean game_loop_headless",
+      "run": "./game_loop_headless default.set danger.map cmd_danger_timeout.cmd",
+      "input": "",
+      "output": " --- Game Status ---\r\n  hp: 3 / 3\r\n  pp: 3 / 3\r\nturn: 33 / 35\r\nnext command: u\r\ngoing: u\r\n --- Game Status ---\r\n  hp: 3 / 3\r\n  pp: 3 / 3\r\nturn: 34 / 35\r\nnext command: u\r\ngoing: u\r\nGAME OVER - time up\r\n",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 10
+    },
+    {
+      "name": "Finish Line v01",
+      "setup": "make clean game_loop_headless",
+      "run": "./game_loop_headless default.set danger.map cmd_danger_win.cmd",
+      "input": "",
+      "output": " --- Game Status ---\r\n  hp: 1 / 3\r\n  pp: 3 / 3\r\nturn: 32 / 35\r\nnext command: d\r\ngoing: d\r\n --- Game Status ---\r\n  hp: 1 / 3\r\n  pp: 3 / 3\r\nturn: 33 / 35\r\nnext command: d\r\ngoing: d\r\nGAME WON!\r\n",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 10
+    }
+  ]
+}

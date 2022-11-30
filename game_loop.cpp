@@ -59,7 +59,6 @@ int main(int argc, char *argv[])
         settings_source.close();
     }
 
-    //string map_filename = "danger.map";
     string map_filename = "simple.map";
 
     if (argc >= 3)
@@ -88,7 +87,7 @@ int main(int argc, char *argv[])
 
     viz->init();
     
-    State_runner runner{state, viz, 500};
+    State_runner runner{state, viz, 1000};
 
     std::thread t{runner};
 

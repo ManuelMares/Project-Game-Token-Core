@@ -13,10 +13,7 @@ namespace Grid_game
     {
         public:
             Game_state(Board &in_board, Token_base &in_token, Driver_base &in_driver, int in_max_turns) : game_board(in_board), player_token(in_token), driver(in_driver), maximum_turns(in_max_turns)
-            { 
-
-                cout << "in_max_turns: " << in_max_turns << "=======================!";
-            } // construct the game
+            { } // construct the game
 
             void run_game_loop_step();
 
