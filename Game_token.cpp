@@ -13,7 +13,7 @@ namespace Grid_game
         oldX = x;
         oldY = y;
         
-        cout << "dir:" << dir << "=====================\n";
+        //cout << "dir:" << dir << "=====================\n";
 
         Space::terrain_type element = board.retrieve_space(x,y).type();
 
@@ -45,9 +45,9 @@ namespace Grid_game
     
     void Token::move_special(vector<direction> vDir){
         
+        //cout <<"(*&^%$@$#%^&*^%$#!#@%^&&^%$!$@#^&^%!$@%#^$^&%$!@%#^$&^%565";
         for (int i = 0; i < vDir.size(); i++)
         {
-            cout <<"(*&^%$@$#%^&*^%$#!#@%^&&^%$!$@#^&^%!$@%#^$^&%$!@%#^$&^%565";
             move(vDir[i]);
         }
         
@@ -60,11 +60,11 @@ namespace Grid_game
         {
           //  Space::terrain_type element = board.retrieve_space(x,y).type();
             
-                //cout <<  " TERR " << terr << "========================\n\n\n";
+                ////cout <<  " TERR " << terr << "========================\n\n\n";
             //e == 0  is free
            if(terr == 0) {
                 //nothing
-                //cout << "GOT INTO NOTHING!==========================================";
+                ////cout << "GOT INTO NOTHING!==========================================";
                 return;
             } 
             //b == 1 is a wall
@@ -92,7 +92,7 @@ namespace Grid_game
                         hp = 0;
                     return;
                 }
-                //cout << "GOT INTO BARRIER!==========================================\n";
+                ////cout << "GOT INTO BARRIER!==========================================\n";
                 
                 if( board.width()-1 == x){
                     moveToLeft = true;
@@ -106,7 +106,7 @@ namespace Grid_game
             //w == 2 is water
             if(terr == 2) {
                 //reduce hp and pp
-                //cout << "GOT INTO WATER!==========================================";
+                ////cout << "GOT INTO WATER!==========================================";
                 --hp;
                 --pp;
                 //check if we died is managed by game_state
@@ -114,14 +114,14 @@ namespace Grid_game
             //l == 3 is lava
             if(terr == 3) 
             {
-                //cout << "GOT INTO LAVA!==========================================";
+                ////cout << "GOT INTO LAVA!==========================================";
                 hp = 0;
             }
         }
         
         catch(const std::exception& e)
         {
-            cout << "EXCEPTION===============================";
+            //cout << "EXCEPTION===============================";
             hp = 0;
         }
         

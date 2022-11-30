@@ -6,7 +6,7 @@ namespace Grid_game
 
     Shape* Window_game::shape()
     {
-        Shape *the_shape = new Graph_lib::Complex_circle{Point(0, 0), 5};
+        Shape *the_shape = new Graph_lib::Complex_circle{Point(18, 18), 20};
         the_shape->set_color(Graph_lib::Color::magenta);
         the_shape->set_fill_color(Graph_lib::Color::magenta);
 
