@@ -5,10 +5,10 @@ namespace Grid_game
     void Game_state::run_game_loop_step()
     {
         // print out the status:
-        cout << " --- Game Status ---" << endl;;
-        cout << "  hp: " << player_token.hit_points() << " / " << player_token.max_hit_points() << endl;
-        cout << "  pp: " << player_token.power_points() << " / " << player_token.max_power_points() << endl;
-        cout << "turn: " << turns_finished << " / " << max_turns() << endl;
+        //cout << " --- Game Status ---" << endl;;
+        //cout << "  hp: " << player_token.hit_points() << " / " << player_token.max_hit_points() << endl;
+        //cout << "  pp: " << player_token.power_points() << " / " << player_token.max_power_points() << endl;
+        //cout << "turn: " << turns_finished << " / " << max_turns() << endl;
 
         if (check_termination_condition() == game_mode::running)
         {
@@ -19,6 +19,8 @@ namespace Grid_game
 
     const game_mode Game_state::check_termination_condition() const
     {
+        //cout << "MAX: " << max_turns();
+
         if (player_token.y_pos() == (game_board.height()-1))
         {
             cout << "GAME WON!" << endl;
