@@ -66,6 +66,11 @@ namespace Grid_game
         virtual void move(direction) = 0;
         virtual void move_special(vector<direction>) = 0;
         virtual void apply_terrain_effect(const Space::terrain_type) = 0;
+        virtual void move_special() = 0;
+        virtual void getMaze() = 0;
+        virtual void getGoal() = 0;
+        virtual void printStackDirections() = 0;
+        virtual void solveMaze(int xn, int yn, string direction) = 0;
     };
 }
 

@@ -37,7 +37,9 @@ struct State_runner
 
 int main(int argc, char *argv[])
 {
+    //ARGC IS EQUAL TO 1
     XInitThreads();
+
 
     // first argument is game settings
     // second argument is map
@@ -46,7 +48,7 @@ int main(int argc, char *argv[])
     // our default game settings
     int hp = 3;
     int pp = 3;
-    int max_rounds = 20;
+    int max_rounds = 50;
 
     if (argc >= 2)
     { // update game settings if provided; file with 3 numbers: max hp, max pp, max_rounds
@@ -87,7 +89,7 @@ int main(int argc, char *argv[])
 
     viz->init();
     
-    State_runner runner{state, viz, 1000};
+    State_runner runner{state, viz, 400};
 
     std::thread t{runner};
 
